@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "InstallSwiftScript",
+    products: [
+    .library(name: "InstallSwiftScriptCore", targets: ["InstallSwiftScriptCore"])
+    ],
     dependencies: [
         .package(url: "https://github.com/JohnSundell/ShellOut.git", from: "2.0.0")
     ],
