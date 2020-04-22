@@ -19,7 +19,9 @@ The library name is `InstallSwiftScriptCore`.
 
 The second and third arguments are vital. One being your executable target name and the next being the command name.  
 
-```let tool = InstallSwiftScript(arguments: [CommandLine.arguments.first ?? "", projectName, toolName])
+```
+
+let tool = InstallSwiftScript(arguments: [CommandLine.arguments.first ?? "", projectName, toolName])
 
 do {
     try tool.run()
