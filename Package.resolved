@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "RunsShellCommand",
+        "repositoryURL": "https://github.com/DIY-Team/RunsShellCommand",
+        "state": {
+          "branch": null,
+          "revision": "271615362a67107e832eb9da881d8309489d94b2",
+          "version": "0.0.1"
+        }
+      },
+      {
         "package": "ShellOut",
         "repositoryURL": "https://github.com/JohnSundell/ShellOut.git",
         "state": {

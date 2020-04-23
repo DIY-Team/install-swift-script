@@ -9,7 +9,7 @@ let package = Package(
     .library(name: "InstallSwiftScriptCore", targets: ["InstallSwiftScriptCore"])
     ],
     dependencies: [
-        .package(url: "https://github.com/JohnSundell/ShellOut.git", from: "2.0.0")
+        .package(url: "https://github.com/DIY-Team/RunsShellCommand", from: "0.0.1")
     ],
     targets: [
         .target(
@@ -17,6 +17,6 @@ let package = Package(
             dependencies: ["InstallSwiftScriptCore"]),
         .target(
             name: "InstallSwiftScriptCore",
-            dependencies: ["ShellOut"])
+            dependencies: ["RunsShellCommand"])
     ]
 )
