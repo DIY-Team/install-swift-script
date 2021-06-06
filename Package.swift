@@ -5,9 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "InstallSwiftScript",
-//    products: [
-//    .executable(name: "InstallSwiftScript", targets: ["InstallSwiftScript"])
-//    ],
+    products: [
+        .executable(name: "InstallSwiftScript", targets: ["InstallSwiftScript"]),
+        .library(name: "InstallSwiftScriptCore", targets: ["InstallSwiftScriptCore"]),
+    ],
     dependencies: [
         .package(url: "https://github.com/DIY-Team/RunsShellCommand", from: "0.0.2"),
         .package(url: "https://github.com/apple/swift-argument-parser", from: "0.4.0"),
@@ -15,6 +16,9 @@ let package = Package(
     targets: [
         .target(
             name: "InstallSwiftScript",
+            dependencies: ["InstallSwiftScriptCore"]),
+        .target(
+            name: "InstallSwiftScriptCore",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "RunsShellCommand", package: "RunsShellCommand"),

@@ -8,11 +8,11 @@
 import Foundation
 import RunsShellCommand
 
-enum ShellCommand: AnyShellCommand {
+public enum ShellCommand: AnyShellCommand {
     case createSwiftReleaseBuild
     case copyBuildArtefactToUserLocalBin(projectName: String, toolName: String)
     
-    var command: String {
+    public var command: String {
         get {
             switch self {
             case .createSwiftReleaseBuild: return "swift"
@@ -21,7 +21,7 @@ enum ShellCommand: AnyShellCommand {
         }
     }
     
-    var defaultArguments: [String] {
+    public var defaultArguments: [String] {
         get {
             switch self {
             case .createSwiftReleaseBuild: return ["build", "-c", "release"]
@@ -30,7 +30,7 @@ enum ShellCommand: AnyShellCommand {
         }
     }
 
-    func execute() {
+    public func execute() {
         execute(with: [], atPath: ".")
     }
 }

@@ -1,1 +1,3 @@
+import InstallSwiftScriptCore
+
 Installer.main()
