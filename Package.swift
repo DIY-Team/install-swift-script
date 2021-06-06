@@ -4,10 +4,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "InstallSwiftScript",
+    name: "install-swift-script",
     products: [
-        .executable(name: "InstallSwiftScript", targets: ["InstallSwiftScript"]),
         .library(name: "InstallSwiftScriptCore", targets: ["InstallSwiftScriptCore"]),
+        .executable(name: "InstallSwiftScript", targets: ["InstallSwiftScript"]),
     ],
     dependencies: [
         .package(url: "https://github.com/DIY-Team/RunsShellCommand", from: "0.0.2"),
